@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f427af;
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 400px;
+   
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.tabs button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background-color: #e0e0e0;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.tabs button.active {
+    background-color: #2196f3;
+    color: white;
+}
+
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+.calculator, .unit-converter {
+    text-align: center;
+}
+
+.display {
+    width: 100%;
+    height: 50px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: right;
+    font-size: 1.5em;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.buttons button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.buttons button:hover {
+    background-color: #45a049;
+}
+
+.buttons .operator {
+    background-color: #ff9800;
+}
+
+.buttons .operator:hover {
+    background-color: #fb8c00;
+}
+
+.buttons .equal {
+    background-color: #2196f3;
+}
+
+.buttons .equal:hover {
+    background-color: #1e88e5;
+}
+
+.buttons .clear {
+    background-color: #f44336;
+}
+
+.buttons .clear:hover {
+    background-color: #e53935;
+}
+
+.unit-converter input, .unit-converter select {
+    width: calc(50% - 10px);
+    padding: 10px;
+    margin: 5px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.unit-converter button {
+    margin-top: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.unit-converter button:hover {
+    background-color: #45a049;
+}

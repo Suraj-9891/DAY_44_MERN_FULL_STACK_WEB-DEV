@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Calculator & Unit Converter</title>
+   <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab-btn active" onclick="switchTab('calculator')">Calculator</button>
+            <button class="tab-btn" onclick="switchTab('unit-converter')">Unit Converter</button>
+        </div>
+
+        <div id="calculator" class="section active">
+            <div id="display" class="display">0</div>
+            <div class="buttons">
+                <button onclick="clearDisplay()" class="clear">C</button>
+                <button onclick="deleteLast()">DEL</button>
+                <button onclick="append('%')">%</button>
+                <button onclick="append('/')" class="operator">/</button>
+
+                <button onclick="append('7')">7</button>
+                <button onclick="append('8')">8</button>
+                <button onclick="append('9')">9</button>
+                <button onclick="append('*')" class="operator">*</button>
+
+                <button onclick="append('4')">4</button>
+                <button onclick="append('5')">5</button>
+                <button onclick="append('6')">6</button>
+                <button onclick="append('-')" class="operator">-</button>
+
+                <button onclick="append('1')">1</button>
+                <button onclick="append('2')">2</button>
+                <button onclick="append('3')">3</button>
+                <button onclick="append('+')" class="operator">+</button>
+
+                <button onclick="append('.')">.</button>
+                <button onclick="append('0')">0</button>
+                <button onclick="toggleSign()">±</button>
+                <button onclick="calculate()" class="equal">=</button>
+            </div>
+        </div>
+
+        <div id="unit-converter" class="section">
+            <div class="unit-converter">
+                <input type="number" id="inputValue" placeholder="Enter value">
+                <select id="inputCategory" onchange="populateUnits()">
+                    <option value="length">Length</option>
+                    <option value="area">Area</option>
+                    <option value="volume">Volume</option>
+                    <option value="weight">Weight</option>
+                    <option value="temperature">Temperature</option>
+                    <option value="speed">Speed</option>
+                    <option value="pressure">Pressure</option>
+                    <option value="power">Power</option>
+                </select>
+                <select id="inputUnit"></select>
+                <select id="outputUnit"></select>
+                <button onclick="convertUnits()">Convert</button>
+                <div id="conversionResult"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"> </script>
+</body>
+</html>
